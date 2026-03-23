@@ -9,16 +9,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
-                bat 'mvn clean install -DskipTests'
-            }
-        }
-
-        stage('Run Tests (Docker Grid)') {
-            steps {
-                bat 'docker-compose down'
-                bat 'docker-compose up --build'
+                bat 'mvn clean test'
             }
         }
     }
