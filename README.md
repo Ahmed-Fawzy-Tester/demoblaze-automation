@@ -20,6 +20,12 @@ The goal of this project is to automate the user shopping flow on DemoBlaze. It 
 - **Build Tool:** Maven
 - **Design Pattern:** Page Object Model (POM)
 
+## 🐳 Docker + Selenium Grid
+docker-compose up -d && mvn test -Dgrid=true
+
+## 🔄 Jenkins CI/CD
+See Jenkinsfile for complete pipeline
+
 ---
 
 ## 📂 Project Structure
