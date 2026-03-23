@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoBlaze Suite">
+    <test name="E2E Tests">
+        <classes>
+            <class name="tests.EndToEndTest"/>
+        </classes>
+    </test>
+</suite>
