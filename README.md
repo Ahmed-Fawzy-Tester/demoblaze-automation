@@ -1,43 +1,128 @@
-# DemoBlaze E2E Test Automation 🛒🚀
+# 🚀 Demoblaze Selenium Automation Project
 
-A robust, End-to-End (E2E) web automation testing project for [DemoBlaze.com](https://www.demoblaze.com/), an e-commerce demo application. Built using Java, Selenium WebDriver 4, TestNG, and the Page Object Model (POM) design pattern.
+## 📌 Overview
 
-## 📌 Project Overview
-The goal of this project is to automate the user shopping flow on DemoBlaze. It specifically handles complex UI interactions, such as dynamic JavaScript alerts that appear during the "Add to Cart" process, ensuring a stable and reliable automated test suite.
+This project is an **End-to-End (E2E) Test Automation Framework** built using:
 
-### 🌟 Key Features
-- **Page Object Model (POM):** Clean separation of test logic from page actions for high maintainability.
-- **Selenium Manager:** Native driver management using Selenium 4.27.0 (no external `WebDriverManager` needed).
-- **Explicit Waits:** Smart synchronization using `WebDriverWait` to handle dynamic elements and JavaScript alerts smoothly.
-- **TestNG Integration:** Structured test execution, assertions, and reporting.
+* Java
+* Selenium WebDriver
+* TestNG
+* Maven
+* Docker
+* Jenkins (CI/CD)
 
----
-
-## 🛠️ Technology Stack
-- **Language:** Java 24
-- **Automation Tool:** Selenium WebDriver (v4.27.0)
-- **Testing Framework:** TestNG (v7.10.2)
-- **Build Tool:** Maven
-- **Design Pattern:** Page Object Model (POM)
-
-## 🐳 Docker + Selenium Grid
-docker-compose up -d && mvn test -Dgrid=true
-
-## 🔄 Jenkins CI/CD
-See Jenkinsfile for complete pipeline
+It automates user flows on the **Demoblaze** website, simulating real user behavior such as login and purchasing products.
 
 ---
 
-## 📂 Project Structure
-```text
-src/
-├── main/java/utils/
-│   └── DriverManager.java       # Centralized browser & driver setup
-├── test/java/pages/
-│   ├── HomePage.java            # Home page actions & locators
-│   ├── ProductPage.java         # Product details & Alert handling
-│   └── CartPage.java            # Cart verification logic
-├── test/java/tests/
-│   └── EndToEndTest.java        # Main test execution flow
-└── test/resources/
-    └── testng.xml               # TestNG suite configuration
+## 🧱 Project Structure
+
+```
+src/test/java
+│
+├── base
+│     BaseTest.java
+│
+├── pages
+│     LoginPage.java
+│     HomePage.java
+│
+├── utils
+│     WaitUtils.java
+│
+├── tests
+│     EndToEndTest.java
+```
+
+---
+
+## ⚙️ Tech Stack
+
+| Tool     | Purpose                       |
+| -------- | ----------------------------- |
+| Selenium | Browser automation            |
+| TestNG   | Test framework                |
+| Maven    | Build & dependency management |
+| Docker   | Containerization              |
+| Jenkins  | Continuous Integration        |
+
+---
+
+## 🔥 Features
+
+* ✅ Page Object Model (POM) design pattern
+* ✅ Explicit waits for stability
+* ✅ End-to-End test scenario (Login → Add to Cart → Checkout)
+* ✅ Dockerized test execution
+* ✅ CI/CD pipeline with Jenkins
+
+---
+
+## 🧪 Test Scenario
+
+* Open Demoblaze website
+* Login with valid credentials
+* Select a product
+* Add product to cart
+* Place order
+
+---
+
+## ▶️ Run Tests Locally
+
+```bash
+mvn clean test
+```
+
+---
+
+## 🐳 Run Tests with Docker
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## 🤖 Run with Jenkins
+
+1. Create a Pipeline job
+2. Connect to this repository
+3. Run pipeline
+
+---
+
+## ⚠️ Common Issues & Fixes
+
+### Stale Element Exception
+
+* Use explicit waits (`WaitUtils`)
+* Avoid storing elements before page reload
+
+### Maven Dependency Issues
+
+```bash
+docker-compose build --no-cache
+```
+
+---
+
+## 📈 Future Improvements
+
+* 🔹 Add Allure Reports
+* 🔹 Parallel test execution
+* 🔹 Cross-browser testing (Selenium Grid)
+* 🔹 GitHub Actions integration
+
+---
+
+## 👨‍💻 Author
+
+**Ahmed Fawzy**
+QA Automation Engineer | DevOps Enthusiast
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ on GitHub!
