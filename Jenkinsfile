@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -12,18 +8,17 @@ pipeline {
             }
         }
 
-        stage('Check Tools') {
+        stage('Build & Run with Docker Compose') {
             steps {
-                sh 'git --version'
-                sh 'java -version'
-                sh 'mvn -version'
+                sh 'docker compose down || true'
+                sh 'docker compose up --build --abort-on-container-exit'
             }
         }
+    }
 
-        stage('Build & Test') {
-            steps {
-                sh 'mvn clean test'
-            }
+    post {
+        always {
+            sh 'docker compose down || true'
         }
     }
 }
