@@ -1,3 +1,8 @@
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Selenium](https://img.shields.io/badge/Selenium-Automation-green)
+![CI](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
+
 # 🚀 Demoblaze Selenium Automation Project
 
 ## 📌 Overview
