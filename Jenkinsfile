@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -10,9 +14,9 @@ pipeline {
 
         stage('Check Tools') {
             steps {
-                sh 'git --version || true'
-                sh 'java -version || true'
-                sh 'mvn -version || true'
+                sh 'git --version'
+                sh 'java -version'
+                sh 'mvn -version'
             }
         }
 
