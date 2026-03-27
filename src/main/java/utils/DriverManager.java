@@ -1,8 +1,10 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
 import java.time.Duration;
 
 public class DriverManager {
@@ -10,18 +12,24 @@ public class DriverManager {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--disable-blink-features=AutomationControlled");
+            try {
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--disable-blink-features=AutomationControlled");
+                options.addArguments("--headless=new");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--window-size=1920,1080");
 
-            // مهم جدًا لجينكنز/لينكس
-            options.addArguments("--headless=new");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--window-size=1920,1080");
+                driver = new RemoteWebDriver(
+                        new URL("http://selenium-hub:4444/wd/hub"),
+                        options
+                );
 
-            driver = new ChromeDriver(options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
         return driver;
     }
