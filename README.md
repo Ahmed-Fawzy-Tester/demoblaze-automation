@@ -81,12 +81,12 @@ demoblaze-automation/
 ├── Jenkinsfile
 ├── pom.xml
 └── README.md
-
+```
 
 ---
 
 
-## 👨‍💻 Author
+### 👨‍💻 Author
 
 **Ahmed Fawzy**
 QA Automation Engineer | DevOps Enthusiast
@@ -94,6 +94,6 @@ www.linkedin.com/in/ahmed-f-188302225
 
 ---
 
-## ⭐ If you like this project
+### ⭐ If you like this project
 
 Give it a star ⭐ on GitHub!
