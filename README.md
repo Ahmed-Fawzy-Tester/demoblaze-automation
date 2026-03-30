@@ -3,128 +3,90 @@
 ![Selenium](https://img.shields.io/badge/Selenium-Automation-green)
 ![CI](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
 
-# 🚀 Demoblaze Selenium Automation Project
+# Demoblaze Automation Project
 
-## 📌 Overview
+Automated end-to-end testing project for the Demoblaze website using **Java, Selenium WebDriver, TestNG, Maven, Docker, Selenium Grid, and Jenkins**.
 
-This project is an **End-to-End (E2E) Test Automation Framework** built using:
-
-* Java
-* Selenium WebDriver
-* TestNG
-* Maven
-* Docker
-* Jenkins (CI/CD)
-
-It automates user flows on the **Demoblaze** website, simulating real user behavior such as login and purchasing products.
+This project demonstrates a full UI automation workflow, starting from test development to containerized execution and CI pipeline integration.
 
 ---
 
-## 🧱 Project Structure
+## Project Overview
 
-```
-src/test/java
-│
-├── base
-│     BaseTest.java
-│
-├── pages
-│     LoginPage.java
-│     HomePage.java
-│
-├── utils
-│     WaitUtils.java
-│
-├── tests
-│     EndToEndTest.java
-```
+This project automates a basic e-commerce flow on the **Demoblaze** website:
 
----
+- Open the website
+- Select a product
+- Add the product to cart
+- Accept the alert
+- Navigate to the cart page
+- Verify the product is visible in the cart
 
-## ⚙️ Tech Stack
+The project is designed to show practical skills in:
 
-| Tool     | Purpose                       |
-| -------- | ----------------------------- |
-| Selenium | Browser automation            |
-| TestNG   | Test framework                |
-| Maven    | Build & dependency management |
-| Docker   | Containerization              |
-| Jenkins  | Continuous Integration        |
+- UI test automation
+- Page Object Model (POM)
+- Selenium Grid
+- Dockerized test execution
+- Jenkins CI/CD integration
 
 ---
 
-## 🔥 Features
+## Tech Stack
 
-* ✅ Page Object Model (POM) design pattern
-* ✅ Explicit waits for stability
-* ✅ End-to-End test scenario (Login → Add to Cart → Checkout)
-* ✅ Dockerized test execution
-* ✅ CI/CD pipeline with Jenkins
-
----
-
-## 🧪 Test Scenario
-
-* Open Demoblaze website
-* Login with valid credentials
-* Select a product
-* Add product to cart
-* Place order
+- **Java**
+- **Selenium WebDriver**
+- **TestNG**
+- **Maven**
+- **Docker**
+- **Docker Compose**
+- **Selenium Grid**
+- **Jenkins**
+- **Git & GitHub**
 
 ---
 
-## ▶️ Run Tests Locally
+## Framework Design
 
-```bash
-mvn clean test
-```
+This project follows the **Page Object Model (POM)** design pattern for better readability, maintainability, and scalability.
 
----
+### Main Components
 
-## 🐳 Run Tests with Docker
+- **Pages**
+  - Contains page classes and locators
+  - Example: homepage actions, product page actions, cart page verification
 
-```bash
-docker-compose up --build
-```
+- **Utils**
+  - Handles WebDriver setup and browser configuration
 
----
-
-## 🤖 Run with Jenkins
-
-1. Create a Pipeline job
-2. Connect to this repository
-3. Run pipeline
+- **Tests**
+  - Contains the test classes and test scenarios
 
 ---
 
-## ⚠️ Common Issues & Fixes
+## Project Structure
 
-### Stale Element Exception
-
-* Use explicit waits (`WaitUtils`)
-* Avoid storing elements before page reload
-
-### Maven Dependency Issues
-
-```bash
-docker-compose build --no-cache
-```
-
----
-
-## 📈 Future Improvements
-
-* 🔹 Add Allure Reports
-* 🔹 Parallel test execution
-* 🔹 Cross-browser testing (Selenium Grid)
-* 🔹 GitHub Actions integration
-
----
+```text
+demoblaze-automation/
+├── src/
+│   ├── main/java/
+│   │   ├── pages/
+│   │   └── utils/
+│   └── test/java/
+│       └── tests/
+├── screenshots/
+├── Dockerfile
+├── Dockerfile.jenkins
+├── docker-compose.yml
+├── Jenkinsfile
+├── pom.xml
+└── README.md
 
 ## 👨‍💻 Author
 
 **Ahmed Fawzy**
 QA Automation Engineer | DevOps Enthusiast
+www.linkedin.com/in/ahmed-f-188302225
 
 ---
 
