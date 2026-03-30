@@ -10,15 +10,15 @@ pipeline {
 
         stage('Build & Run with Docker Compose') {
             steps {
-                sh 'docker compose down || true'
-                sh 'docker compose up --build --abort-on-container-exit'
+                sh 'docker-compose down || true'
+                sh 'docker-compose up --build --abort-on-container-exit'
             }
         }
     }
 
     post {
         always {
-            sh 'docker compose down || true'
+            sh 'docker-compose down || true'
         }
     }
 }
