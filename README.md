@@ -32,6 +32,7 @@ The project is designed to show practical skills in:
 
 ---
 
+
 ## Tech Stack
 
 - **Java**
@@ -82,6 +83,13 @@ demoblaze-automation/
 ├── pom.xml
 └── README.md
 ```
+---
+
+### Screenshots
+![Jenkins Success](screenshots/Screenshot 2026-03-30 135443.png)
+![Build Success](screenshots/vsdc-sr 2026-03-23 17-53-45.mp4)
+
+
 
 ---
 
