@@ -87,7 +87,7 @@ demoblaze-automation/
 
 ### Screenshots
 ![Jenkins Success](screenshots/Jenkins.png)
-![Build Success](screenshots/ScreenCast.mp4)
+[Build Demo Video](screenshots/ScreenCast.mp4)
 
 
 
