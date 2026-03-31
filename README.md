@@ -86,8 +86,8 @@ demoblaze-automation/
 ---
 
 ### Screenshots
-![Jenkins Success](screenshots/Screenshot 2026-03-30 135443.png)
-![Build Success](screenshots/vsdc-sr 2026-03-23 17-53-45.mp4)
+![Jenkins Success](screenshots/Jenkins.png)
+![Build Success](screenshots/ScreenCast.mp4)
 
 
 
